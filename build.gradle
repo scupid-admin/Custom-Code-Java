@@ -9,6 +9,9 @@ repositories {
 
 dependencies {
 
+// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.5.4'
+
 // https://mvnrepository.com/artifact/org.springframework/spring-context
     compile group: 'org.springframework', name: 'spring-context', version: '4.2.9.RELEASE'
 

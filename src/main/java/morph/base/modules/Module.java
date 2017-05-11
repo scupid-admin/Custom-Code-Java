@@ -1,6 +1,7 @@
 package morph.base.modules;
 
 import morph.base.actions.Action;
+import morph.base.beans.variables.BotContext;
 
 import java.util.List;
 
@@ -12,6 +13,6 @@ public interface Module {
 
     String getModuleName();
 
-    List<Action> execute();
+    List<Action> execute(BotContext botContext);
 
 }
