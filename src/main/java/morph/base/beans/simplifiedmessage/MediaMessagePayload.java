@@ -1,7 +1,5 @@
 package morph.base.beans.simplifiedmessage;
 
-import com.altin.morphbase.message.enums.MessageType;
-
 /**
  * @author ishan
  * @since 28/01/17

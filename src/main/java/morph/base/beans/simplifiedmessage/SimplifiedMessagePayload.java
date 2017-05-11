@@ -15,7 +15,6 @@ import java.util.List;
 @JsonSubTypes({@JsonSubTypes.Type(value = TextMessagePayload.class, name = "statement"),
         @JsonSubTypes.Type(value = CarousalMessagePayload.class, name = "carousel"),
         @JsonSubTypes.Type(value = ListMessagePayload.class, name = "list"),
-        @JsonSubTypes.Type(value = ReceiptMessagePayload.class, name = "receipt"),
         @JsonSubTypes.Type(value = MediaMessagePayload.class, name = "media")})
 public abstract class SimplifiedMessagePayload {
 
