@@ -2,7 +2,6 @@ package morph.base.beans.variables;
 
 import morph.base.beans.User;
 
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,32 +10,32 @@ import java.util.Map;
  */
 public class BotContext {
 
-    private Map<String, List<Object>> userVariables;
-    private Map<String, List<Object>> flowVariables;
-    private Map<String, List<Object>> globalVariables;
+    private Map<String, Object> userVariables;
+    private Map<String, Object> flowVariables;
+    private Map<String, Object> globalVariables;
     private User user;
 
-    public Map<String, List<Object>> getUserVariables() {
+    public Map<String, Object> getUserVariables() {
         return userVariables;
     }
 
-    public void setUserVariables(Map<String, List<Object>> userVariables) {
+    public void setUserVariables(Map<String, Object> userVariables) {
         this.userVariables = userVariables;
     }
 
-    public Map<String, List<Object>> getFlowVariables() {
+    public Map<String, Object> getFlowVariables() {
         return flowVariables;
     }
 
-    public void setFlowVariables(Map<String, List<Object>> flowVariables) {
+    public void setFlowVariables(Map<String, Object> flowVariables) {
         this.flowVariables = flowVariables;
     }
 
-    public Map<String, List<Object>> getGlobalVariables() {
+    public Map<String, Object> getGlobalVariables() {
         return globalVariables;
     }
 
-    public void setGlobalVariables(Map<String, List<Object>> globalVariables) {
+    public void setGlobalVariables(Map<String, Object> globalVariables) {
         this.globalVariables = globalVariables;
     }
 
