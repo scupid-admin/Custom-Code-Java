@@ -26,6 +26,6 @@ public class GoToFlowAction implements Action {
 
     @Override
     public String getName() {
-        return "goToFlowAction";
+        return "goToFlow";
     }
 }
