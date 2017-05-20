@@ -9,12 +9,18 @@ import morph.base.actions.VariableScope;
  */
 public class SetVariableAction implements Action {
 
-    private final VariableScope variableScope;
-    private final String variableKey;
+    private VariableScope variableScope;
+    private String variableKey;
+    private Object value;
 
-    public SetVariableAction(VariableScope variableScope, String variableKey) {
+    public SetVariableAction(VariableScope variableScope, String variableKey, Object value) {
         this.variableScope = variableScope;
         this.variableKey = variableKey;
+        this.value = value;
+    }
+
+    public SetVariableAction(VariableScope variableScope, String variableKey) {
+        this(variableScope, variableKey, null);
     }
 
     public VariableScope getVariableScope() {
@@ -23,6 +29,22 @@ public class SetVariableAction implements Action {
 
     public String getVariableKey() {
         return variableKey;
+    }
+
+    public Object getValue() {
+        return value;
+    }
+
+    public void setVariableScope(VariableScope variableScope) {
+        this.variableScope = variableScope;
+    }
+
+    public void setVariableKey(String variableKey) {
+        this.variableKey = variableKey;
+    }
+
+    public void setValue(Object value) {
+        this.value = value;
     }
 
     @Override
