@@ -1,8 +1,10 @@
 package morph.base.beans.variables;
 
 import morph.base.beans.User;
+import org.springframework.util.StringUtils;
 
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Created by jayeshathila
@@ -45,5 +47,29 @@ public class BotContext {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Optional<Object> getFlowVariable(String key) {
+        if (StringUtils.isEmpty(key) || flowVariables.get(key) == null) {
+            return Optional.empty();
+        }
+
+        return Optional.of(flowVariables.get(key));
+    }
+
+    public Optional<Object> getUserVariable(String key) {
+        if (StringUtils.isEmpty(key) || userVariables.get(key) == null) {
+            return Optional.empty();
+        }
+
+        return Optional.of(userVariables.get(key));
+    }
+
+    public Optional<Object> getGlobalVariable(String key) {
+        if (StringUtils.isEmpty(key) || globalVariables.get(key) == null) {
+            return Optional.empty();
+        }
+
+        return Optional.of(globalVariables.get(key));
     }
 }
