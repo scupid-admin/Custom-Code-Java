@@ -4,11 +4,11 @@ package morph.base.actions;
  * @author ishan
  * @since 12/06/17
  */
-public class DoubleVariable extends Variable {
+public class NumberVariable extends Variable {
 
     private double value;
 
-    public DoubleVariable() {
+    public NumberVariable() {
         setVariableType(VariableType.DOUBLE);
     }
 
@@ -20,7 +20,7 @@ public class DoubleVariable extends Variable {
         this.value = value;
     }
 
-    public DoubleVariable value(final double value) {
+    public NumberVariable value(final double value) {
         this.value = value;
         return this;
     }
