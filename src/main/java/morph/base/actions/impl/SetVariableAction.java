@@ -12,12 +12,18 @@ public class SetVariableAction implements Action {
 
     private VariableScope variableScope;
     private String variableKey;
+    private String variableTitle;
     private Variable variable;
 
-    public SetVariableAction(VariableScope variableScope, String variableKey, Variable
-            variable) {
+    public SetVariableAction(VariableScope variableScope, String variableKey, Variable variable) {
         this.variableScope = variableScope;
         this.variableKey = variableKey;
+        this.variable = variable;
+    }
+
+    public SetVariableAction(String variableTitle, VariableScope variableScope, Variable variable) {
+        this.variableTitle = variableTitle;
+        this.variableScope = variableScope;
         this.variable = variable;
     }
 
@@ -45,6 +51,13 @@ public class SetVariableAction implements Action {
         this.variable = variable;
     }
 
+    public String getVariableTitle() {
+        return variableTitle;
+    }
+
+    public void setVariableTitle(String variableTitle) {
+        this.variableTitle = variableTitle;
+    }
 
     @Override
     public String getName() {
@@ -53,10 +66,7 @@ public class SetVariableAction implements Action {
 
     @Override
     public String toString() {
-        return "SetVariableAction{" +
-                "variableScope=" + variableScope +
-                ", variableKey='" + variableKey + '\'' +
-                ", variable=" + variable +
-                '}';
+        return "SetVariableAction{" + "variableScope=" + variableScope + ", variableKey='" + variableKey + '\'' +
+                ", variable=" + variable + '}';
     }
 }
