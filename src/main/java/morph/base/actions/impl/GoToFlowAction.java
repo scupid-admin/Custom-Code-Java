@@ -10,14 +10,22 @@ public class GoToFlowAction implements Action {
 
     public static final String GO_TO_FLOW = "goToFlow";
     private final String nextFlowKey;
+    private String nextFlowTitle;
 
-
-    public GoToFlowAction(String nextFlowKey, boolean rerunCurrectFlow) {
+    public GoToFlowAction(String nextFlowKey) {
         this.nextFlowKey = nextFlowKey;
     }
 
     public String getNextFlowKey() {
         return nextFlowKey;
+    }
+
+    public String getNextFlowTitle() {
+        return nextFlowTitle;
+    }
+
+    public void setNextFlowTitle(String nextFlowTitle) {
+        this.nextFlowTitle = nextFlowTitle;
     }
 
     @Override
