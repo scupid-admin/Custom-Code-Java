@@ -16,33 +16,29 @@ public class SimplifiedMessage {
     /**
      * Represents the customer interface account key
      */
-    @JsonProperty(SimplifiedMessageMapping.USER_ID)
-    private String customerIAK;
+    private String userId;
 
-    @JsonProperty(SimplifiedMessageMapping.BOT_ID)
     private String botId;
 
     /**
      * The main field that contains the message content
      */
-    @JsonProperty(SimplifiedMessage.SimplifiedMessageMapping.MESSAGES)
-    private List<SimplifiedMessagePayload> payloads;
+    private List<SimplifiedMessagePayload> messages;
 
-
-    public String getCustomerIAK() {
-        return customerIAK;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setCustomerIAK(String customerIAK) {
-        this.customerIAK = customerIAK;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public List<SimplifiedMessagePayload> getPayloads() {
-        return payloads;
+    public List<SimplifiedMessagePayload> getMessages() {
+        return messages;
     }
 
-    public void setPayloads(List<SimplifiedMessagePayload> payloads) {
-        this.payloads = payloads;
+    public void setMessages(List<SimplifiedMessagePayload> messages) {
+        this.messages = messages;
     }
 
     public String getBotId() {
@@ -53,19 +49,12 @@ public class SimplifiedMessage {
         this.botId = botId;
     }
 
-    public interface SimplifiedMessageMapping {
-        String USER_ID = "user_id";
-        String BOT_ID = "bot_id";
-        String MESSAGE_TYPE = "type";
-        String MESSAGES = "messages";
-    }
-
     @Override
     public String toString() {
         return "SimplifiedMessage{" +
-                "customerIAK='" + customerIAK + '\'' +
+                "userId='" + userId + '\'' +
                 ", botId='" + botId + '\'' +
-                ", payloads=" + payloads +
+                ", messages=" + messages +
                 '}';
     }
 }

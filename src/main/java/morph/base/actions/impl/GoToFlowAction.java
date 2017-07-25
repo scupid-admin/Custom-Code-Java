@@ -8,24 +8,20 @@ import morph.base.actions.Action;
  */
 public class GoToFlowAction implements Action {
 
+    public static final String GO_TO_FLOW = "goToFlow";
     private final String nextFlowKey;
-    private final boolean rerunCurrentFlow;
+
 
     public GoToFlowAction(String nextFlowKey, boolean rerunCurrectFlow) {
         this.nextFlowKey = nextFlowKey;
-        this.rerunCurrentFlow = rerunCurrectFlow;
     }
 
     public String getNextFlowKey() {
         return nextFlowKey;
     }
 
-    public boolean isRerunCurrentFlow() {
-        return rerunCurrentFlow;
-    }
-
     @Override
     public String getName() {
-        return "goToFlow";
+        return GO_TO_FLOW;
     }
 }

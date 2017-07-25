@@ -9,6 +9,7 @@ import morph.base.beans.simplifiedmessage.SimplifiedMessage;
  */
 public class PublishMessageAction implements Action {
 
+    public static final String PUBLISH = "publish";
     private SimplifiedMessage simplifiedMessage;
 
     public SimplifiedMessage getSimplifiedMessage() {
@@ -21,6 +22,6 @@ public class PublishMessageAction implements Action {
 
     @Override
     public String getName() {
-        return "publish";
+        return PUBLISH;
     }
 }

@@ -10,6 +10,7 @@ import morph.base.actions.VariableScope;
  */
 public class SetVariableAction implements Action {
 
+    public static final String SET_VARIABLE = "setVariableAction";
     private VariableScope variableScope;
     private String variableKey;
     private String variableTitle;
@@ -61,7 +62,7 @@ public class SetVariableAction implements Action {
 
     @Override
     public String getName() {
-        return "setVariableAction";
+        return SET_VARIABLE;
     }
 
     @Override

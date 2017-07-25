@@ -20,7 +20,6 @@ public abstract class SimplifiedMessagePayload {
 
     private List<SuggestionElement> suggestionElements;
 
-    @JsonProperty(SimplifiedMessage.SimplifiedMessageMapping.MESSAGE_TYPE)
     private MessageType messageType;
 
     public SimplifiedMessagePayload(MessageType messageType) {
