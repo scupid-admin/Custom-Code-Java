@@ -15,14 +15,21 @@ public class SetVariableAction implements Action {
     private String variableKey;
     private String variableTitle;
     private Variable variable;
+    private String name;
+
+    public SetVariableAction() {
+        setName(SET_VARIABLE);
+    }
 
     public SetVariableAction(VariableScope variableScope, String variableKey, Variable variable) {
+        setName(SET_VARIABLE);
         this.variableScope = variableScope;
         this.variableKey = variableKey;
         this.variable = variable;
     }
 
     public SetVariableAction(String variableTitle, VariableScope variableScope, Variable variable) {
+        setName(SET_VARIABLE);
         this.variableTitle = variableTitle;
         this.variableScope = variableScope;
         this.variable = variable;
@@ -58,6 +65,11 @@ public class SetVariableAction implements Action {
 
     public void setVariableTitle(String variableTitle) {
         this.variableTitle = variableTitle;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

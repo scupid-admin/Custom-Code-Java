@@ -10,7 +10,13 @@ import morph.base.beans.simplifiedmessage.SimplifiedMessage;
 public class PublishMessageAction implements Action {
 
     public static final String PUBLISH = "publish";
+
+    private String name;
     private SimplifiedMessage simplifiedMessage;
+
+    public PublishMessageAction() {
+        setName(PUBLISH);
+    }
 
     public SimplifiedMessage getSimplifiedMessage() {
         return simplifiedMessage;
@@ -18,6 +24,10 @@ public class PublishMessageAction implements Action {
 
     public void setSimplifiedMessage(SimplifiedMessage simplifiedMessage) {
         this.simplifiedMessage = simplifiedMessage;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
