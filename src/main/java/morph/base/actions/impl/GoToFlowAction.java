@@ -9,8 +9,12 @@ import morph.base.actions.Action;
 public class GoToFlowAction implements Action {
 
     public static final String GO_TO_FLOW = "goToFlow";
-    private final String nextFlowKey;
+    private String nextFlowKey;
     private String nextFlowTitle;
+
+
+    public GoToFlowAction() {
+    }
 
     public GoToFlowAction(String nextFlowKey) {
         this.nextFlowKey = nextFlowKey;
