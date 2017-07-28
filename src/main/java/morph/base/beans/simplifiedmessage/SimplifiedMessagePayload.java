@@ -11,7 +11,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXTERNAL_PROPERTY, visible = false, property
-        = "type", defaultImpl = Void.class)
+        = "messageType", defaultImpl = Void.class)
 @JsonSubTypes({@JsonSubTypes.Type(value = TextMessagePayload.class, name = "statement"),
         @JsonSubTypes.Type(value = CarousalMessagePayload.class, name = "carousel"),
         @JsonSubTypes.Type(value = ListMessagePayload.class, name = "list"),
